@@ -10,6 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* The isalnum() function shall test whether c is a
+       character of class alpha or digit */
+
 #include "libft.h"
 
 int	ft_isalnum(int c)

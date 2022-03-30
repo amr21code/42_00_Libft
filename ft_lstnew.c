@@ -6,9 +6,13 @@
 /*   By: anruland <anruland@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/22 16:40:56 by anruland          #+#    #+#             */
-/*   Updated: 2022/03/23 14:59:51 by anruland         ###   ########.fr       */
+/*   Updated: 2022/03/30 16:45:11 by anruland         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* Allocates (with malloc) and returns a new element. The variable 'content'
+	is initialized with the value of the parameter 'content'.
+	The variable 'next' is initialized to NULL */
 
 #include "libft.h"
 

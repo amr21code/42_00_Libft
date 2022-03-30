@@ -10,6 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* The isdigit() function shall test whether c is a
+       character of type digit. */
+
 int	ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')

@@ -10,6 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* Allocates and returns an array of strings obtained by splitting 's'
+	using the character 'c' as a delimiter. The array must be ended
+	by a NULL pointer */
+
 #include "libft.h"
 
 size_t	ft_count_words(const char *str, char c)

@@ -6,9 +6,13 @@
 /*   By: anruland <anruland@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 12:20:00 by anruland          #+#    #+#             */
-/*   Updated: 2022/03/23 15:06:50 by anruland         ###   ########.fr       */
+/*   Updated: 2022/03/30 16:27:01 by anruland         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* Takes as a parameter an element and frees the memory of the element's
+	content using the function 'del' given as a parameter and
+	free the element. The memory of 'next' must not be freed.  */
 
 #include "libft.h"
 

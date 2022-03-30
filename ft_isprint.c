@@ -10,6 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* The isprint() function shall test if c is a
+       character of class print */
+
 int	ft_isprint(int c)
 {
 	if (c >= 32 && c < 127)

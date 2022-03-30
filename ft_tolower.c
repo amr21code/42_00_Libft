@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* Converts the uppercase char 'c' to lowercase */
+
 int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')

@@ -10,6 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* Outputs the string 'str' to the given file descriptor followed by
+	a newline. */
+
 #include "libft.h"
 
 void	ft_putendl_fd(char *str, int fd)

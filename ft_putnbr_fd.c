@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* Outputs the integer 'nb' to the given file descriptor. */
+
 #include "libft.h"
 
 int	ft_prepare_numbers(char *number_array, unsigned int num)

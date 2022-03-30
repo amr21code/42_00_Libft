@@ -6,9 +6,11 @@
 /*   By: anruland <anruland@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 11:49:01 by anruland          #+#    #+#             */
-/*   Updated: 2022/03/23 12:02:37 by anruland         ###   ########.fr       */
+/*   Updated: 2022/03/30 16:45:49 by anruland         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* Counts the number of elements in a list. */
 
 #include "libft.h"
 

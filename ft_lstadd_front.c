@@ -6,9 +6,11 @@
 /*   By: anruland <anruland@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 11:21:18 by anruland          #+#    #+#             */
-/*   Updated: 2022/03/23 11:48:04 by anruland         ###   ########.fr       */
+/*   Updated: 2022/03/30 16:04:44 by anruland         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* Adds the element 'new' at the beginning of the list. */
 
 #include "libft.h"
 

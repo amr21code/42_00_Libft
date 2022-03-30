@@ -10,6 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* The isalpha() function shall test if c is a
+       character of class alpha */
+
 int	ft_isalpha(int c)
 {
 	if (!(c >= 'A' && c <= 'Z') && !(c >= 'a' && c <= 'z'))
