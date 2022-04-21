@@ -14,7 +14,7 @@
 
 #include "libft.h"
 
-int	ft_prepare_numbers(char *number_array, unsigned int num)
+int	ft_prepare_nbr(char *number_array, unsigned int num)
 {
 	int	counter;
 
@@ -46,7 +46,7 @@ void	ft_putnbr_fd(int nb, int fd)
 		num = -nb;
 		write(fd, "-", 1);
 	}
-	counter = ft_prepare_numbers(output, num);
+	counter = ft_prepare_nbr(output, num);
 	while (counter >= 0)
 	{
 		write(fd, &output[counter], 1);

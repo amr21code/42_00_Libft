@@ -39,7 +39,7 @@ size_t	ft_count_words(const char *str, char c)
 	return (c_count);
 }
 
-size_t	ft_addr_diff(const char *s, char *str, char c)
+size_t	ft_addr_diff(const char *s, char c)
 {
 	size_t	diff;
 	char	*ptr;
@@ -49,7 +49,7 @@ size_t	ft_addr_diff(const char *s, char *str, char c)
 	ptr = ft_strchr(s, c);
 	diff = ptr - s;
 	if (ptr == (NULL))
-		diff = ft_strlen(str) - (ft_strlen(str) - ft_strlen((char *)s));
+		diff = ft_strlen(s) - (ft_strlen(s) - ft_strlen(s));
 	return (diff);
 }
 
@@ -69,12 +69,12 @@ const char	*ft_moveptr(const char *s, size_t word_cnt)
 char	**ft_split(char const *s, char c)
 {
 	char	**split;
-	char	*str;
 	size_t	c_count;
 	size_t	word_cnt;
 	size_t	i;
 
-	str = (char *)s;
+	if (!s)
+		return (NULL);
 	i = 0;
 	c_count = ft_count_words(s, c);
 	split = (char **)ft_calloc((c_count + 1), sizeof(char *));
@@ -82,7 +82,7 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	while (i < c_count)
 	{
-		word_cnt = ft_addr_diff(s, str, c) + 1;
+		word_cnt = ft_addr_diff(s, c) + 1;
 		split[i] = (char *)ft_calloc(word_cnt, sizeof(char));
 		while (*s == c)
 			s++;

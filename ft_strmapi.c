@@ -22,7 +22,11 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	int		i;
 
 	i = 0;
-	modified = (char *)malloc(sizeof(char) * (ft_strlen((char *)s) + 1));
+	if (!s || !f)
+		return (NULL);
+	modified = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
+	if (!modified)
+		return (NULL);
 	while (s[i])
 	{
 		modified[i] = f(i, s[i]);

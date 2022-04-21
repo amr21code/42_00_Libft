@@ -10,11 +10,18 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libft.a
+# Config
+
+NAME 		= libft.a
+CC			= gcc
+CFLAGS		= -Werror -Wall -Wextra
+AR			= ar rcs
+
+# Files
 
 SRC_C 		= ft_atoi.c ft_memchr.c ft_split.c ft_strmapi.c\
 				ft_bzero.c ft_lstadd_front.c ft_memcmp.c ft_strchr.c ft_strncmp.c\
-				ft_calloc.c ft_memcpy.c ft_strcpy.c ft_strnstr.c\
+				ft_calloc.c ft_memcpy.c ft_strnstr.c\
 				ft_isalnum.c ft_memmove.c ft_strdup.c ft_strrchr.c\
 				ft_isalpha.c ft_memset.c ft_striteri.c ft_strtrim.c\
 				ft_isascii.c ft_putchar_fd.c ft_strjoin.c ft_substr.c\
@@ -28,12 +35,16 @@ SRC_O 		= *.o
 all: $(NAME)
 
 $(NAME):
-	@gcc -c $(SRC_C) -Werror -Wall -Wextra
-	@ar rcs $(NAME) $(SRC_O)
+	@$(CC) -c $(SRC_C) $(CFLAGS)
+	@$(AR) $(NAME) $(SRC_O)
 
 bonus: $(NAME)
-	@gcc -c $(SRC_C_BONUS) -Werror -Wall -Wextra
-	@ar rcs $(NAME) $(SRC_O)
+	@$(CC) -c $(SRC_C_BONUS) $(CFLAGS)
+	@$(AR) $(NAME) $(SRC_O)
+
+so:
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC_C)
+	gcc -nostartfiles -shared -o libft.so $(SRC_O)
 
 clean:
 	/bin/rm -f *.o

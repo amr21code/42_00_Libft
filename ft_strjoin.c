@@ -23,6 +23,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*concat;
 
 	i = 0;
+	if (!s1 || !s2)
+		return (NULL);
 	size_s1 = ft_strlen((char *)s1);
 	size_s2 = ft_strlen((char *)s2);
 	concat = (char *)malloc(sizeof(char) * (size_s1 + size_s2 + 1));

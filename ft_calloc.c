@@ -20,12 +20,11 @@ void	*ft_calloc(size_t elem, size_t elsize)
 {
 	void	*pointer;
 
-	if (elem == 0)
+	if (elem > 0 && (__SIZE_MAX__ / elem) < elsize)
 		return (NULL);
 	pointer = malloc(elem * elsize);
-	if (pointer)
-	{
-		ft_bzero(pointer, elem * elsize);
-	}
+	if (!pointer)
+		return (NULL);
+	ft_bzero(pointer, elem * elsize);
 	return (pointer);
 }
