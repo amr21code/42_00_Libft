@@ -42,10 +42,6 @@ bonus: $(NAME)
 	@$(CC) -c $(SRC_C_BONUS) $(CFLAGS)
 	@$(AR) $(NAME) $(SRC_O)
 
-so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC_C)
-	gcc -nostartfiles -shared -o libft.so $(SRC_O)
-
 clean:
 	/bin/rm -f *.o
 
