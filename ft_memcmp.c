@@ -36,11 +36,19 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		if (str1[i] < str2[i])
-			return (cmp = -1);
-		else if (str1[i] > str2[i])
-			return (cmp = 1);
+		if (str1[i] != str2[i])
+			return (str1[i] - str2[i]);
 		i++;
 	}
 	return (cmp);
+}
+#include <stdio.h>
+
+int	main(void)
+{
+	char str1[] = "";
+	char str2[] = "M";
+	
+	printf("%d\n", ft_memcmp((const void *)str1, (const void *)str2, -1));
+	return (0);
 }
