@@ -27,7 +27,9 @@ SRC_C 		= ft_atoi.c ft_memchr.c ft_split.c ft_strmapi.c\
 				ft_isascii.c ft_putchar_fd.c ft_strjoin.c ft_substr.c\
 				ft_isdigit.c ft_putendl_fd.c ft_strlcat.c ft_tolower.c\
 				ft_isprint.c ft_putnbr_fd.c ft_strlcpy.c ft_toupper.c\
-				ft_itoa.c ft_putstr_fd.c ft_strlen.c
+				ft_itoa.c ft_putstr_fd.c ft_strlen.c \
+				ft_putnbr_ulong_fd_base.c ft_hexlen.c ft_nbrlen_base_sign.c \
+				
 SRC_C_BONUS = ft_lstclear.c ft_lstdelone.c ft_lstiter.c ft_lstlast.c\
 				ft_lstmap.c ft_lstnew.c ft_lstsize.c ft_lstadd_back.c
 SRC_O 		= *.o

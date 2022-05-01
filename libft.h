@@ -115,4 +115,14 @@ void	ft_lstiter(t_list *lst, void (*f)(void*));
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
+/* ************** added stuff ************ */
+
+char	*ft_strcpy(char *dest, char *src);
+
+void	ft_putnbr_ulong_fd_base(unsigned long nb, int fd, int base, int up);
+
+int		ft_hexlen(unsigned long nb);
+
+size_t	ft_nbrlen_base_sign(long long nbr, int sign, int base);
+
 #endif
