@@ -11,14 +11,12 @@
 # **************************************************************************** #
 
 # Config
-
 NAME 		= libft.a
 CC			= gcc
 CFLAGS		= -Werror -Wall -Wextra
 AR			= ar rcs
 
 # Files
-
 SRC_C 		= ft_atoi.c ft_memchr.c ft_split.c ft_strmapi.c\
 				ft_bzero.c ft_lstadd_front.c ft_memcmp.c ft_strchr.c ft_strncmp.c\
 				ft_calloc.c ft_memcpy.c ft_strcpy.c ft_strnstr.c\
@@ -32,26 +30,21 @@ SRC_C 		= ft_atoi.c ft_memchr.c ft_split.c ft_strmapi.c\
 				ft_lstclear.c ft_lstdelone.c ft_lstiter.c ft_lstlast.c\
 				ft_lstmap.c ft_lstnew.c ft_lstsize.c ft_lstadd_back.c\
 				ft_printf.c ft_printf_utils.c
-
 SRC_O 		= $(SRC_C:%.c=%.o)
 
+# Rules
 all: $(NAME)
 
-$(NAME):
-	@$(CC) -c $(SRC_C) $(CFLAGS)
+$(NAME): $(SRC_O)
 	@$(AR) $(NAME) $(SRC_O)
 
 %.o: %.clean
-	$CC -c $(CFLAGS) -o $@ $^
-
-# bonus: $(NAME)
-# 	@$(CC) -c $(SRC_C_BONUS) $(CFLAGS)
-# 	@$(AR) $(NAME) $(SRC_O)
+	$(CC) -c $(CFLAGS) -o $@ $^
 
 clean:
-	/bin/rm -f $($SRC_O)
+	@/bin/rm -f $(SRC_O)
 
 fclean: clean
-	/bin/rm -f $(NAME)
+	@/bin/rm -f $(NAME)
 
 re: fclean all
