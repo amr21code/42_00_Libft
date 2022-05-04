@@ -29,10 +29,11 @@ SRC_C 		= ft_atoi.c ft_memchr.c ft_split.c ft_strmapi.c\
 				ft_isprint.c ft_putnbr_fd.c ft_strlcpy.c ft_toupper.c\
 				ft_itoa.c ft_putstr_fd.c ft_strlen.c \
 				ft_putnbr_ulong_fd_base.c ft_hexlen.c ft_nbrlen_base_sign.c \
-				
-SRC_C_BONUS = ft_lstclear.c ft_lstdelone.c ft_lstiter.c ft_lstlast.c\
-				ft_lstmap.c ft_lstnew.c ft_lstsize.c ft_lstadd_back.c
-SRC_O 		= *.o
+				ft_lstclear.c ft_lstdelone.c ft_lstiter.c ft_lstlast.c\
+				ft_lstmap.c ft_lstnew.c ft_lstsize.c ft_lstadd_back.c\
+				ft_printf.c ft_printf_utils.c
+
+SRC_O 		= $(SRC_C:%.c=%.o)
 
 all: $(NAME)
 
@@ -40,12 +41,15 @@ $(NAME):
 	@$(CC) -c $(SRC_C) $(CFLAGS)
 	@$(AR) $(NAME) $(SRC_O)
 
-bonus: $(NAME)
-	@$(CC) -c $(SRC_C_BONUS) $(CFLAGS)
-	@$(AR) $(NAME) $(SRC_O)
+%.o: %.clean
+	$CC -c $(CFLAGS) -o $@ $^
+
+# bonus: $(NAME)
+# 	@$(CC) -c $(SRC_C_BONUS) $(CFLAGS)
+# 	@$(AR) $(NAME) $(SRC_O)
 
 clean:
-	/bin/rm -f *.o
+	/bin/rm -f $($SRC_O)
 
 fclean: clean
 	/bin/rm -f $(NAME)
