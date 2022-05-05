@@ -18,6 +18,14 @@
 # include <string.h>
 # include <stdarg.h>
 
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 4
+# endif
+
+# ifndef FD_MAX
+#  define FD_MAX 1024
+# endif
+
 typedef struct s_list
 {
 	void			*content;
@@ -87,5 +95,12 @@ int		ft_hexlen(unsigned long nb);
 int		ft_count_args_printf(const char *format);
 size_t	ft_nbrlen(long long nbr, int sign, int base);
 int		ft_printf_strlen(char *str);
+
+/* ************** get_next_line ************ */
+char	*ft_gnl_join(char *main_buf, char *buf);
+char	*ft_gnl_read_file(int fd, char *main_buf);
+char	*ft_gnl_prepare_line(const char *main_buf);
+char	*ft_gnl_prepare_next(char *main_buf, unsigned int i, unsigned int j);
+char	*get_next_line(int fd);
 
 #endif

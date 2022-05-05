@@ -29,7 +29,8 @@ SRC_C 		= ft_atoi.c ft_memchr.c ft_split.c ft_strmapi.c\
 				ft_putnbr_ulong_fd_base.c ft_hexlen.c ft_nbrlen_base_sign.c \
 				ft_lstclear.c ft_lstdelone.c ft_lstiter.c ft_lstlast.c\
 				ft_lstmap.c ft_lstnew.c ft_lstsize.c ft_lstadd_back.c\
-				ft_printf.c ft_printf_utils.c
+				ft_printf.c ft_printf_utils.c\
+				get_next_line.c
 SRC_O 		= $(SRC_C:%.c=%.o)
 
 # Rules
