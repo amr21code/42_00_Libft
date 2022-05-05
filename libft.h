@@ -93,12 +93,9 @@ int		ft_printerror(char *errormsg);
 int		ft_linecount(char *dir);
 char	*ft_strndup(char *src, int len);
 int		ft_strlen_c(char *str, char c);
-void	*ft_realloc(void *addr, size_t size);
 
 /* ************** ft_printf ************ */
 int		ft_printf(const char *format, ...);
-void	ft_putnbr_ulong_fd_base(unsigned long nb, int fd, int base, int up);
-int		ft_hexlen(unsigned long nb);
 int		ft_count_args_printf(const char *format);
 size_t	ft_nbrlen(long long nbr, int sign, int base);
 int		ft_printf_strlen(char *str);
