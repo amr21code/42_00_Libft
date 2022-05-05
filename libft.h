@@ -17,6 +17,7 @@
 # include <stdlib.h>
 # include <string.h>
 # include <stdarg.h>
+# include <fcntl.h>
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 4
@@ -87,6 +88,12 @@ char	*ft_strcpy(char *dest, char *src);
 void	ft_putnbr_ulong_fd_base(unsigned long nb, int fd, int base, int up);
 int		ft_hexlen(unsigned long nb);
 size_t	ft_nbrlen_base_sign(long long nbr, int sign, int base);
+void	*ft_realloc(void *addr, size_t size);
+int		ft_printerror(char *errormsg);
+int		ft_linecount(char *dir);
+char	*ft_strndup(char *src, int len);
+int		ft_strlen_c(char *str, char c);
+void	*ft_realloc(void *addr, size_t size);
 
 /* ************** ft_printf ************ */
 int		ft_printf(const char *format, ...);

@@ -30,7 +30,9 @@ SRC_C 		= ft_atoi.c ft_memchr.c ft_split.c ft_strmapi.c\
 				ft_lstclear.c ft_lstdelone.c ft_lstiter.c ft_lstlast.c\
 				ft_lstmap.c ft_lstnew.c ft_lstsize.c ft_lstadd_back.c\
 				ft_printf.c ft_printf_utils.c\
-				get_next_line.c
+				get_next_line.c \
+				ft_linecount.c ft_printerror.c ft_realloc.c\
+				ft_strlen_c.c ft_strndup.c
 SRC_O 		= $(SRC_C:%.c=%.o)
 
 # Rules
@@ -39,7 +41,7 @@ all: $(NAME)
 $(NAME): $(SRC_O)
 	@$(AR) $(NAME) $(SRC_O)
 
-%.o: %.clean
+%.o: %.c
 	$(CC) -c $(CFLAGS) -o $@ $^
 
 clean:
