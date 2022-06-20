@@ -6,7 +6,7 @@
 /*   By: anruland <anruland@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 14:00:39 by anruland          #+#    #+#             */
-/*   Updated: 2022/05/06 20:26:24 by anruland         ###   ########.fr       */
+/*   Updated: 2022/05/15 09:14:23 by anruland         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,10 @@ int		is_whitespace(char c);
 
 char	*skip_whitespaces(char *str);
 
+/**
+ * Converts ASCII to long
+ * @param str [const char *] String to convert
+ */
 long	ft_atol(const char *str)
 {
 	int		is_negative;
